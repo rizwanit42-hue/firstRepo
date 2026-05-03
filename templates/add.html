@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="align-items: center;">
+    ADD NEW STUDENT
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <form action="/add" method="POST">
+        <label>Student Name:</label>
+        <input type="text" name="name" placeholder="Enter student name">
+        <hr/>
+        <label>Email Address:</label>
+        <input type="text" name="email" placeholder="Enter Email Address">
+        <hr/>
+        <label>Enter Phone: </label>
+        <input type="text" name="phone" placeholder="Enter Phone Number">
+        <hr/>
+        
+        <label>Select Your Course</label>
+        <select name="courses">
+            <option value="cs">Computer Science</option>
+            <option value="IT">Information Technology</option>
+            <option value="AI">Artifitial Intelligence</option>
+            <option value="SE">Software Engineering</option>
+        </select>
+        <hr/>
+        <button>Save Student Record</button>
+    </form>
+</div>
+
+{% endblock %}

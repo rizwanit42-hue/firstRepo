@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="padding: 10px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; margin-bottom: 15px; border-radius: 5px;">
+    <table border="1">
+        <thead>
+            <th> ID </th>
+            <th> NAME </th>
+            <th> EMAIL </th>
+            <th> COURSE </th>
+            <th> PHONE </th>
+            <th> ACTION </th>
+        </thead>
+        {% for data in data %}
+        <tr>
+            <td>{{data[0]}}</td>
+            <td>{{data[1]}}</td>
+            <td>{{data[2]}}</td>
+            <td>{{data[4]}}</td>
+            <td>{{data[3]}}</td>
+            <td>EDIT/DELETE</td>
+        </tr>
+        {% endfor %}
+</div>
+
+{% endblock %}
